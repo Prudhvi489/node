@@ -4,7 +4,11 @@ const bodyparser= require('body-parser');
 const router = require('./routes')
 const mongoose = require('mongoose');
 const cors=  require('cors')
+const multer=  require('multer');
 app.use(bodyparser.urlencoded({extended:false}));
+// Set up Multer for image upload
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 // accepting cors
 app.use(
   cors({
