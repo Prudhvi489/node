@@ -1,4 +1,4 @@
-const {Imguploads} = require('../database/connection');
+const {Imguploads} = require('../database/connections/connection');
 const { statusCode } = require('../utils/statusCode');
 const imageservice={
     addimages:async(payload)=>{

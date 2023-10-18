@@ -1,4 +1,4 @@
-const {users}=require('../database/connection')
+const {users}=require('../database/connections/connection')
 const {statusCode} = require('../utils/statusCode')
 const bcrypt= require('bcrypt')
 const userservice={
