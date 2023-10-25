@@ -26,7 +26,11 @@ const localimageservice={
     geteachimage:async(payload)=>{
         try{
             const eachimg= await localimg.findById(payload);
-            return eachimg.path;
+            // single image retrival
+            // return eachimg.path;
+            // Multiple images retrieval
+            return statusCode(1,"images retrieved successfully",eachimg);
+
         }
         catch(err){
 

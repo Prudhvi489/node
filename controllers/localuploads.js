@@ -23,7 +23,9 @@ const localuploads={
     getsingleimage:async(req,res)=>{
         try{
             const eachimg= await localimageservice.geteachimage(req.params.id);
-            res.sendFile(path.join(__dirname,'..',eachimg))
+            // res.sendFile(path.join(__dirname,'..',eachimg))
+            console.log(eachimg)
+            return res.json(eachimg)
         }
         catch(err){
             return res.json({status:0,message:"internal server error"})
